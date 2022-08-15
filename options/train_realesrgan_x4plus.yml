@@ -36,10 +36,10 @@ queue_size: 180
 # dataset and data loader settings
 datasets:
   train:
-    name: DF2K+OST
+    name: unsplash
     type: RealESRGANDataset
-    dataroot_gt: datasets/DF2K
-    meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale+OST_sub.txt
+    dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/train/LR/x4
+    meta_info: /content/REAL-ESRGAN/datasets/data_without_da/train/LR/meta_info/meta_info_trainlrx4multiscale.txt
     io_backend:
       type: disk
 
@@ -99,7 +99,7 @@ network_d:
 # path
 path:
   # use the pre-trained Real-ESRNet model
-  pretrain_network_g: experiments/pretrained_models/RealESRNet_x4plus.pth
+  pretrain_network_g: /content/REAL-ESRGAN/experiments/pretrained_models/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth
   param_key_g: params_ema
   strict_load_g: true
   resume_state: ~
