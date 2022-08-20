@@ -1,7 +1,8 @@
 # flake8: noqa
 import os.path as osp
+import sys
+sys.path.append("/content/REAL-ESRGAN/")
 from basicsr.train import train_pipeline
-
 import realesrgan.archs
 import realesrgan.data
 import realesrgan.models
