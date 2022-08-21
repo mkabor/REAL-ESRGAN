@@ -39,7 +39,7 @@ datasets:
     name: unsplash
     type: RealESRGANDataset
     dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/train/HR_sub
-    meta_info: /content/REAL-ESRGAN/datasets/data_without_da/train/LR/meta_info/meta_info_trainlrx4multiscale.txt
+    meta_info: /content/REAL-ESRGAN/datasets/data_without_da/train/meta_info/meta_info_trainlrx4multiscale.txt
     io_backend:
       type: disk
 
