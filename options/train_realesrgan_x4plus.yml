@@ -38,8 +38,8 @@ datasets:
   train:
     name: unsplash
     type: RealESRGANDataset
-    dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/train/LR/x4_sub
-    meta_info: /content/REAL-ESRGAN/datasets/data_without_da/train/LR/meta_info/meta_info_trainlrx4multiscale.txt
+    dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/train/HR_sub
+    meta_info: /content/REAL-ESRGAN/datasets/data_without_da/train/meta_info/meta_info_trainhrmultiscale.txt
     io_backend:
       type: disk
 
@@ -74,12 +74,12 @@ datasets:
 
   # Uncomment these for validation
 #   val:
-#     name: validation
-#     type: PairedImageDataset
-#     dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/val/HR_sub
-#     dataroot_lq: /content/REAL-ESRGAN/datasets/data_without_da/val/LR/x4_sub
-#     io_backend:
-#       type: disk
+    name: validation
+    type: PairedImageDataset
+    dataroot_gt: /content/REAL-ESRGAN/datasets/data_without_da/val/HR_sub
+    dataroot_lq: /content/REAL-ESRGAN/datasets/data_without_da/val/LR/x4_sub
+    io_backend:
+      type: disk
 
 # network structures
 network_g:
@@ -160,15 +160,15 @@ train:
 
 # Uncomment these for validation
 # validation settings
-# val:
-#   val_freq: !!float 5e3
-#   save_img: True
+val:
+  val_freq: !!float 5e3
+  save_img: True
 
-#   metrics:
-#     psnr: Kappa
-#       type: calculate_psnr
-#       crop_border: 4
-#       test_y_channel: false
+  metrics:
+    psnr: Kappa
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
 
 # logging settings
 logger:
