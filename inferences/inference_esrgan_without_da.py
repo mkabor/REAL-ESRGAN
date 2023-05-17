@@ -14,7 +14,7 @@ def main():
         '--model_path',
         type=str,
         default=  # noqa: E251
-        '/content/experiments/pretrained_models/ESRGAN/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth'  # noqa: E501
+        '/content/REAL-ESRGAN/experiments/pretrained_models/ESRGAN/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth'  # noqa: E501
     )
     parser.add_argument('--input', type=str, default='/content/REAL-ESRGAN/datasets/data_without_da/train/LR/x4_sub', help='input test image folder')
     parser.add_argument('--output', type=str, default='/content/REAL-ESRGAN/results_without_da/ESRGAN', help='output folder')
